@@ -11,13 +11,30 @@
 		<label for="last_name">Nachname:</label>
 		<input type="text" name="last_name" placeholder="Nachname" /><br>
 
-		<label for="wirtshaus">Infos erhalten für:</label>
+		<label for="wirtshaus">News für:</label>
 		<select name="wirtshaus" list="wirtshaus">
 				<option value="Alle Wirtshäuser" selected>Alle Wirtshäuser</option>
     				<option value="Berlin">Hofbräu Berlin</option>
     				<option value="Esplanade">Hofbräu Esplanade (HH)</option>
   	  			<option value="Speersort">Hofbräu Speersort (HH)</option>
 		</select>
+		
+		 <input type="checkbox" id="dsgvo" name="dsgvo">
+  <label for="scales">Ich akzeptiere</label>
+		
+		<script type="text/javascript">
+
+  function checkForm(dsgvo)
+  {
+    ...
+    if(!form.terms.checked) {
+      alert("Please indicate that you accept the Terms and Conditions");
+      form.terms.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
 		
 		<button type="submit" value="Submit" />Anmelden</button>
 	</fieldset>
