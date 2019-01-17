@@ -1,18 +1,4 @@
-<script type="text/javascript">
-
-  function checkForm(form)
-  {
-    ...
-    if(!form.dsgvo.checked) {
-      alert("Please indicate that you accept the Terms and Conditions");
-      form.dsgvo.focus();
-      return false;
-    }
-    return true;
-  }
-</script>
-
-<form action="https://subscription-widget.herokuapp.com/confirmEmail" method="post" onsubmit="return checkForm(this);>
+<form action="https://subscription-widget.herokuapp.com/confirmEmail" method="post">
 	<fieldset>
 		<legend>Newsletter Anmeldung</legend>
 		
@@ -33,7 +19,7 @@
   	  			<option value="Speersort">Hofbräu Speersort (HH)</option>
 		</select>
 		
-		 <input type="checkbox" id="dsgvo" name="dsgvo">
+		 <input type="checkbox" required>
   <label for="scales">Ich akzeptiere</label>
 		
 		
