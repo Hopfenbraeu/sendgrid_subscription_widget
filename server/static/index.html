@@ -1,11 +1,11 @@
 <script type="text/javascript">
 
-  function checkForm(dsgvo)
+  function checkForm(form)
   {
     ...
-    if(!form.terms.checked) {
+    if(!form.dsgvo.checked) {
       alert("Please indicate that you accept the Terms and Conditions");
-      form.terms.focus();
+      form.dsgvo.focus();
       return false;
     }
     return true;
