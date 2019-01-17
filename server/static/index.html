@@ -1,4 +1,18 @@
-<form action="https://subscription-widget.herokuapp.com/confirmEmail" method="post">
+<script type="text/javascript">
+
+  function checkForm(dsgvo)
+  {
+    ...
+    if(!form.terms.checked) {
+      alert("Please indicate that you accept the Terms and Conditions");
+      form.terms.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+
+<form action="https://subscription-widget.herokuapp.com/confirmEmail" method="post" onsubmit="return checkForm(this);>
 	<fieldset>
 		<legend>Newsletter Anmeldung</legend>
 		
@@ -22,19 +36,6 @@
 		 <input type="checkbox" id="dsgvo" name="dsgvo">
   <label for="scales">Ich akzeptiere</label>
 		
-		<script type="text/javascript">
-
-  function checkForm(dsgvo)
-  {
-    ...
-    if(!form.terms.checked) {
-      alert("Please indicate that you accept the Terms and Conditions");
-      form.terms.focus();
-      return false;
-    }
-    return true;
-  }
-</script>
 		
 		<button type="submit" value="Submit" />Anmelden</button>
 	</fieldset>
