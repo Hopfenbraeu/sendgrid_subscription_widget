@@ -11,6 +11,16 @@
 		<label for="last_name">Nachname:</label>
 		<input type="text" name="last_name" placeholder="Nachname" /><br>
 
+		<label for="wirtshaus">Infos erhalten für:</label>
+		<input type="text" name="wirtshaus" list="wirtshaus">
+  			<datalist id="wirtshaus">
+				<option value="Alle Wirtshäuser" />
+    				<option value="Berlin Alexanderplatz" />
+    				<option value="Hamburg Esplanade" />
+  	  			<option value="Hamburg Speersort" />
+  				</datalist>
+		</input>
+		
 		<button type="submit" value="Submit" />Anmelden</button>
 	</fieldset>
 </form>
