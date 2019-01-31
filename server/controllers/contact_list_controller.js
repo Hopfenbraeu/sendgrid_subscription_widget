@@ -6,10 +6,10 @@ const Settings = require('../../settings');
 const optIn = 'opt-in';
 
 function prepareConfirmationEmail(reqBody) {
-	const subject = "Please Confirm Your Email Address";
+	const subject = "Anmeldung bestätigen";
 	const url = formatUrl(Settings.url) + '/success';
 	const link = "<a href='" + url + "'>this link</a>"
-	const mailText = "Thanks for signing up! Click " + link + " to sign up!  This link will be active for 24 hours.";
+	const mailText = "Vielen Dank für Ihre Anmeldung. Bitte klicken Sie auf " + link + " um die Anmeldung abzuschließen.  Dieser Link ist 24 Std. gültig.";
 
 	var emailBody = {
 	  personalizations: [
